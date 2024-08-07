@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" user-autoscalable="no" content="width=device-width, initial-scale=1.0">
+    <title>Encritador de texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="botones.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Margarine&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Margarine&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+    <header>
+        <img src="img/Logo.png" alt="logo de alura latam" class="logo">
+        <h1 class="titulo">DESAFIO ALURA</h1>
+    </header>
+   
+    
+    <main>
+
+        <!--en esta seccion van los elementos de la respuesta de la pagina-->
+        <section class="respuesta" id="respuesta">    
+             <!-- este elemento establece un boton con un icono de los elemento importados en lina maxicon-->
+            <p hidden id="textoFinal"> hola</p>
+             <i class="ri-file-copy-line"></i>
+            <!-- -------------------------------------------------------------- -->
+            <img src="img/Muñeco.png" alt="Un muñeco con una lupa" class="muneco" id="muneco">
+            <p  id="m1" class="m1">Ningún mensaje fue encontrado</p>
+            <p id="m2" class="m2">Ingresa el texto que desees encriptar o desencriptar. </p>
+            <div class="rectangulo"></div>
+            
+        </section>
+        <!-- -------------------------------------------------------------- -->
+        
+        <!-- en esta seccion es la parte que edita e interactua el usuario-->
+        <section class="user">
+            <p class="texto_usuario" id="textoUsuario" contenteditable="true"  onfocus="eliminarTexto();" onblur="regresarTexto();">Ingresa el texto aqui</p>
+            
+            <!-- esta es la imagen y el cuadro de dialogo de advertencia -->
+            
+            <!-- ------------------------------------------------------------ -->
+            <!-- este es el grupo de los botones-->
+            <div class="advertencia">
+                <div class="advertencia_img">
+                    <i class="ri-information-line"></i>
+                    <p class="info"> Solo letras minusculas y sin acento </p> 
+                </div>   
+                
+                <div class="contenedor_botones">
+                    <button id="encriptar" class="encriptar" onclick="encriptarTexto()"> ENCRIPTAR </button>
+                    <button id="desencriptar" class="desencriptar" onclick="desencriptarTexto()"> DESENCRIPTAR </button>
+                </div>
+            </div>
+            
+            
+            <!-- ------------------------------------------------------------ -->
+        </section>
+
+
+    </main>    
+     
+    
+</body>
+
+<script src="app.js"></script>
+<script src="encriptador.js"></script>
+<script src="desencriptador.js"></script>
+</html>
